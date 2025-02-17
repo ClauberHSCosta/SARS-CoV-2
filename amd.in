@@ -1,0 +1,14 @@
+amd.in
+ &cntrl
+  imin=0,irest=1,ntx=5,
+  nstlim=12500000,dt=0.002,
+  ntc=2,
+  cut=8.0, ntb=1, ntp=0,
+  ntpr=1000, ntwx=1000,
+  ntt=3, gamma_ln=2.0,ig=-1,
+  temp0=300.0,ioutfm=1,iwrap=1,
+  iamd=3,
+  ethreshd=XXXX, alphad=XXXX,
+  ethreshp=XXXX, alphap=XXXX,
+ /
+  
