@@ -1,0 +1,99 @@
+| Run on Sat Feb 22 18:29:17 2025
+|
+|Input file:
+|--------------------------------------------------------------
+|### !de 20000 a 20000
+|Binding Free Energy - PB and GB
+|&general
+| startframe=1, endframe=12500, interval=5, keep_files=0,
+| receptor_mask=":1-597", ligand_mask=":598-791", strip_mask=:WAT:Cl-:Na+,
+|/
+|&gb
+| igb=5, saltcon=0.150,
+|/
+|#&pb
+|# istrng=0.15
+|#/
+|&decomp
+| idecomp=2, dec_verbose=1, csv_format=0, print_res="1-791"
+|/
+|
+|--------------------------------------------------------------
+|MMPBSA.py Version=14.0
+|Solvated complex topology file:  ../complex_box.top
+|Complex topology file:           ../complex.top
+|Receptor topology file:          ../../receptor.top
+|Ligand topology file:            ../../ligand.top
+|Initial mdcrd(s):                ../prod100ns.mdcrd
+|
+|Receptor mask:                  ":1-597"
+|Ligand mask:                    ":598-791"
+|
+|Calculations performed using 2500.8 complex frames.
+|
+|Generalized Born ESURF calculated using 'LCPO' surface areas
+|
+|All units are reported in kcal/mole.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+GENERALIZED BORN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                  -6734.8604               43.7918              0.8758
+EEL                     -57727.7100              181.3552              3.6271
+EGB                      -9533.6606              143.3123              2.8662
+ESURF                      250.1180                3.8064              0.0761
+
+G gas                   -64462.5704              182.5252              3.6505
+G solv                   -9283.5426              141.9853              2.8397
+
+TOTAL                   -73746.1129               93.2901              1.8658
+
+
+Receptor:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                  -5180.4624               38.7811              0.7756
+EEL                     -43278.3082              152.0760              3.0415
+EGB                      -8622.7897              124.1657              2.4833
+ESURF                      191.8024                3.4336              0.0687
+
+G gas                   -48458.7706              151.1768              3.0235
+G solv                   -8430.9872              123.3340              2.4667
+
+TOTAL                   -56889.7578               76.6726              1.5335
+
+
+Ligand:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                  -1458.5742               21.2671              0.4253
+EEL                     -13087.5528               87.3694              1.7474
+EGB                      -2314.5653               67.0131              1.3403
+ESURF                       72.3265                1.7266              0.0345
+
+G gas                   -14546.1271               88.7747              1.7755
+G solv                   -2242.2388               66.4404              1.3288
+
+TOTAL                   -16788.3658               49.7155              0.9943
+
+
+Differences (Complex - Receptor - Ligand):
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                    -95.8238                8.5007              0.1700
+EEL                      -1361.8489               58.8109              1.1762
+EGB                       1403.6943               54.0343              1.0807
+ESURF                      -14.0109                0.9426              0.0189
+
+DELTA G gas              -1457.6727               59.4166              1.1883
+DELTA G solv              1389.6834               53.5802              1.0716
+
+DELTA TOTAL                -67.9893               11.2754              0.2255
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
